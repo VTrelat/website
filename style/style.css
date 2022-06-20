@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "SF Pro Display Light";
+    src: url("SF-Pro-Display-Light.otf");
+}
+
+body {
+    font-family: "SF Pro Display Light";
+    /* center text */
+    text-align: center;
+}
