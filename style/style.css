@@ -12,11 +12,12 @@ body {
 .about-container {
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: auto;
     display: block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 4rem;
 }
 
 .row {
@@ -405,7 +406,7 @@ body {
 }
 
 .md-prose docs-cards {
-    gap: 4.5rem;
+    gap: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -455,7 +456,8 @@ body {
 }
 
 .md-prose docs-card {
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .md-prose docs-card {
@@ -487,4 +489,37 @@ body {
         0 4px 6px -2px rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
         var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+/* icons */
+#icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 10px;
+}
+
+/* title */
+#main-title {
+    letter-spacing: 0.1rem;
+    word-spacing: 2rem;
+}
+
+#about-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#about-link {
+    padding: 5px;
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+#about-link:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.3rem;
+    transition: all 0.5s ease;
 }
