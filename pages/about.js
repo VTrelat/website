@@ -1,6 +1,6 @@
 const About = () => (
     <main>
-        <h1 id="about-title">About</h1>
+        <h1 id="about-title">Contact</h1>
         <div className="about-container">
             <div class="md-prose">
                 <docs-cards>
@@ -53,6 +53,9 @@ const About = () => (
                         </docs-card>
                     </a>
                 </docs-cards>
+                <a className="back-button" href="../">
+                    Home page
+                </a>
             </div>
         </div>
     </main>

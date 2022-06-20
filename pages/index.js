@@ -3,8 +3,10 @@ const Index = () => {
         <main>
             <section className="header">
                 <a className="name">Vincent Trélat</a>
-                <a className="about">Resume</a>
-                <a className="about">Contact</a>
+                <div className="about" href="/cv">
+                    <a href="/resume">Resume</a>
+                    <a href="/about">Contact</a>
+                </div>
             </section>
         </main>
     );
