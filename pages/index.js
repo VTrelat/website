@@ -1,10 +1,11 @@
 const Index = () => {
     const out = (
         <main>
-            <h1 id="main-title">Vincent Trélat</h1>
-            <a id="about-link" href="/about">
-                About me
-            </a>
+            <section className="header">
+                <a className="name">Vincent Trélat</a>
+                <a className="about">Resume</a>
+                <a className="about">Contact</a>
+            </section>
         </main>
     );
     return out;
