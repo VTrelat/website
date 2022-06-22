@@ -3,9 +3,22 @@ const Index = () => {
         <main>
             <section className="header">
                 <a className="name">Vincent Trélat</a>
-                <div className="about" href="/cv">
-                    <a href="/resume">Resume</a>
-                    <a href="/about">Contact</a>
+                <div className="conainer">
+                    <div className="row" id="row-menu">
+                        <img src="https://raw.githubusercontent.com/VTrelat/website/main/img/photocv.jpg" />
+                    </div>
+                    <div className="row" id="row-menu">
+                        <div className="col-md" id="col-menu">
+                            <a className="about" href="/cv">
+                                CV
+                            </a>
+                        </div>
+                        <div className="col-md" id="col-menu">
+                            <a className="about" href="/about">
+                                Contact
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
