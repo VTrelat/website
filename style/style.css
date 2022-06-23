@@ -525,7 +525,6 @@ body {
     display: flex;
     padding: 10px;
     font-size: 3rem;
-    transform: translateY(0%);
     justify-content: center;
     align-items: flex-start;
     animation-duration: 2s;
@@ -537,7 +536,7 @@ body {
 @keyframes slide {
     100% {
         font-size: 1.5rem;
-        top: 0%;
+        top: 10%;
     }
 }
 
@@ -805,7 +804,7 @@ p.bold {
     }
 
     .cv-card-body > img {
-        height: 15rem;
+        height: 18rem;
         width: 100%;
     }
 }
