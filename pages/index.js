@@ -3,7 +3,7 @@ const Index = () => {
         <main>
             <section className="header">
                 <a className="name">Vincent Trélat</a>
-                <div className="conainer">
+                <div className="container">
                     <div className="row" id="row-menu">
                         <img src="https://raw.githubusercontent.com/VTrelat/website/main/img/photocv.jpg" />
                     </div>
