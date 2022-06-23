@@ -13,7 +13,7 @@ const About = () => (
                                 src="http://simpleicon.com/wp-content/uploads/phone-1.png"
                             />
                         </h3>
-                        <a>+33 7 68 20 72 01</a>
+                        <a href="tel:+33 7 68 20 72 01">+33 7 68 20 72 01</a>
                     </docs-card>
                 </a>
                 <a>
