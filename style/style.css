@@ -672,10 +672,10 @@ body {
 }
 
 .cv-container {
-    margin: 2rem;
+    margin: 3rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 16fr));
-    gap: 2rem;
+    gap: 3rem;
     justify-content: center;
 }
 
@@ -686,8 +686,16 @@ body {
     display: flex;
     justify-content: space-between;
     /* cursor: pointer; */
+    height: 0%;
     border-radius: 0.5rem;
+    animation: revealCV 0.5s ease-in-out 0.5s forwards;
     transition: transform 0.1s ease-in;
+}
+
+@keyframes revealCV {
+    100% {
+        height: 100%;
+    }
 }
 
 .cv-card:hover {
