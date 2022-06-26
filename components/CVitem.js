@@ -3,7 +3,10 @@ const CVitem = (props) => {
         <div className="cv-card">
             <div className="cv-card-body">
                 <img src={props.img} />
-                <h2 className="cv-card-title">{props.title}</h2>
+                <div className="cv-card-title-container">
+                    <img src={props.logo} />
+                    <h2 className="cv-card-title">{props.title}</h2>
+                </div>
                 <p className="cv-card-description">{props.content}</p>
             </div>
         </div>

@@ -27,19 +27,29 @@ const sectionProfile = (
         <h3>{"Langages"}</h3>
         <ul>
             <li>
-                Python, LaTex, Git
+                Python, C, LaTex, Git
                 <br />
                 <ProgressBar progress={95} />
             </li>
             <li>
-                C, Isabelle(HOL)
+                OCaml, Isabelle(HOL)
                 <br />
                 <ProgressBar progress={75} />
             </li>
             <li>
-                Javascript, TypeScript, OCaml
+                Javascript, TypeScript
                 <br />
-                <ProgressBar progress={65} />
+                <ProgressBar progress={67} />
+            </li>
+            <li>
+                React, HTML, CSS
+                <br />
+                <ProgressBar progress={63} />
+            </li>
+            <li>
+                Go, Assembly
+                <br />
+                <ProgressBar progress={50} />
             </li>
         </ul>
     </div>
@@ -109,7 +119,8 @@ const sectionExperience = (
         <ul>
             <li>
                 Stage d'assistant ingénieur en méthodes formelles : preuve de
-                bonne définition en langage B
+                bonne définition en langage B. Travail sur la Clearsy Safety
+                Platform.
             </li>
         </ul>
 
@@ -138,12 +149,15 @@ const CV = () => {
     const out = (
         <div className="cv-wrapper">
             <div className="cv-title">
-                <h1>CV</h1>
+                <h1>Vincent Trélat — CV</h1>
             </div>
             <div className="cv-container">
                 <CVitem
                     title="Profil"
                     content={sectionProfile}
+                    logo={
+                        "https://img.icons8.com/ios-glyphs/344/user-male-circle.png"
+                    }
                     img={
                         "https://raw.githubusercontent.com/VTrelat/website/main/img/photocv.jpg"
                     }
@@ -151,12 +165,16 @@ const CV = () => {
                 <CVitem
                     title="Formation"
                     content={sectionEducation}
+                    logo={
+                        "https://upload.wikimedia.org/wikipedia/commons/e/e8/Education%2C_Studying%2C_University%2C_Alumni_-_icon.png"
+                    }
                     img={
                         "https://mines-nancy.univ-lorraine.fr/wp-content/uploads/2018/03/MinesNancy_Galerie3-2100x900.jpg"
                     }
                 />
                 <CVitem
                     title="Expérience"
+                    logo={"http://cdn.onlinewebfonts.com/svg/img_406242.png"}
                     content={sectionExperience}
                     img={
                         "https://www.clearsy.com/wp-content/uploads/2021/02/clearsy-safety.jpg"
