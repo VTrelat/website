@@ -51,6 +51,11 @@ const sectionProfile = (
                 <br />
                 <ProgressBar progress={50} />
             </li>
+            <li>
+                B
+                <br />
+                <ProgressBar progress={45} />
+            </li>
         </ul>
     </div>
 );
@@ -118,9 +123,13 @@ const sectionExperience = (
         <h4>Juin 2022 — Septembre 2022</h4>
         <ul>
             <li>
-                Stage d'assistant ingénieur en méthodes formelles : preuve de
-                bonne définition en langage B. Travail sur la Clearsy Safety
-                Platform.
+                Stage d'assistant ingénieur en méthodes formelles :
+                justification formelle en B de la validité et la sécurité des
+                aspects exécution en temps réel de la{" "}
+                <a href="https://www.clearsy.com/outils/clearsy-safety-platform/">
+                    Clearsy Safety Platform
+                </a>
+                .
             </li>
         </ul>
 
@@ -140,6 +149,30 @@ const sectionExperience = (
             <li>
                 Mathématiques, physique et informatique, plus de dix élèves
                 entre 3e et bac+2
+            </li>
+        </ul>
+
+        <h3>Photographe</h3>
+        <h4>Occasionnel</h4>
+        <ul>
+            <li>
+                Photos de produits réalisées pour des clients comme{" "}
+                <a href="https://justonecard.fr/">JustOneCard</a> ou l'École des
+                Mines de Nancy.
+            </li>
+            <li>
+                Portraits officiels de membres d'associations comme le{" "}
+                <a href="https://www.est-horizon.com/">Forum Est Horizon</a> ou{" "}
+                <a href="https://www.tedxminesnancy.com/">Tedx Mines Nancy</a>
+            </li>
+            <li>
+                Couverture d'événements comme le concert{" "}
+                <a href="https://www.facebook.com/Le-P%C3%A8re-No%C3%ABl-est-un-Rockeur-141759285867084/">
+                    Le Père Noël est un Rockeur
+                </a>
+                , dit le "Perno", dont l'entrée est gratuite et le but est de
+                récolter des jouets qui sont distribués à des enfants
+                défavorisés.
             </li>
         </ul>
     </div>

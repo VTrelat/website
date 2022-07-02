@@ -4,17 +4,20 @@ const Index = () => {
             <section className="header">
                 <a className="name">Vincent Trélat</a>
                 <div className="container">
-                    <div className="row" id="row-menu">
-                        <img src="https://raw.githubusercontent.com/VTrelat/website/main/img/photocv.jpg" />
-                    </div>
+                    <img src="https://raw.githubusercontent.com/VTrelat/website/main/img/photocv.jpg" />
                     <div className="row" id="row-menu">
                         <div className="col-md" id="col-menu">
-                            <a className="about" href="/cv">
+                            <a className="contact" href="/cv">
                                 CV
                             </a>
                         </div>
+                        {/* <div className="col-md" id="col-menu">
+                            <a className="contact" href="/about">
+                                About
+                            </a>
+                        </div> */}
                         <div className="col-md" id="col-menu">
-                            <a className="about" href="/about">
+                            <a className="contact" href="/contact">
                                 Contact
                             </a>
                         </div>
