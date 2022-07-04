@@ -185,7 +185,11 @@ const CV = () => {
                 <h1>Vincent Trélat — CV</h1>
                 <div className="download-button-container">
                     <img src="" />
-                    <a className="download-link" href="" target="_blank">
+                    <a
+                        className="download-link"
+                        href="https://github.com/VTrelat/website/raw/main/img/cv.pdf"
+                        target="_blank"
+                    >
                         .getPDF()
                     </a>
                 </div>
