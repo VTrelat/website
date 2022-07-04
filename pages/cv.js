@@ -183,6 +183,12 @@ const CV = () => {
         <div className="cv-wrapper">
             <div className="cv-title">
                 <h1>Vincent Trélat — CV</h1>
+                <div className="download-button-container">
+                    <img src="" />
+                    <a className="download-link" href="" target="_blank">
+                        .getPDF()
+                    </a>
+                </div>
             </div>
             <div className="cv-container">
                 <CVitem
@@ -215,7 +221,7 @@ const CV = () => {
                 />
             </div>
             <a className="back-button" href="../">
-                Home page
+                .homepage()
             </a>
         </div>
     );

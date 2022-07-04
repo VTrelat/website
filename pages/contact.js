@@ -1,7 +1,7 @@
 import React from "react";
 
 const Contact = () => (
-    <div className="about-container">
+    <div className="contact-container">
         <h1 id="about-title">Contact</h1>
         <div class="md-prose">
             <docs-cards>
@@ -55,7 +55,7 @@ const Contact = () => (
                 </a>
             </docs-cards>
             <a className="back-button" href="../">
-                Home page
+                .homepage()
             </a>
         </div>
     </div>

@@ -9,7 +9,7 @@
     src: url("SF-Pro-Display-Light.otf");
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 
 body {
     font-family: "Computer Modern", sans-serif;
@@ -21,7 +21,7 @@ body {
     text-align: center;
 }
 
-.about-container {
+.contact-container {
     margin-left: auto;
     margin-right: auto;
     width: auto;
@@ -526,7 +526,7 @@ body {
     width: 100%;
     display: flex;
     padding: 10px;
-    font-size: 3rem;
+    font-size: 4rem;
     justify-content: center;
     align-items: flex-start;
     animation-duration: 2s;
@@ -537,7 +537,7 @@ body {
 }
 @keyframes slide {
     100% {
-        font-size: 1.5rem;
+        font-size: 2rem;
         top: 10%;
     }
 }
@@ -545,7 +545,7 @@ body {
 #row-menu {
     min-width: 100px;
     width: 100%;
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem;
     margin-left: auto;
@@ -556,6 +556,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5em;
     width: 10em;
     height: 10em;
     border-radius: 10rem;
@@ -564,7 +565,7 @@ body {
     border: 2px solid #0000;
     opacity: 0;
     animation: reveal 1s ease-in-out 1.5s forwards;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
 
 .container > img:hover {
@@ -583,7 +584,8 @@ body {
     padding: 10px;
 }
 
-.contact {
+.homepage-link {
+    font-family: "Source Code Pro", monospace;
     width: 100%;
     color: black;
     text-decoration: none;
@@ -595,10 +597,10 @@ body {
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     padding: 10px;
-    transition: all 0.2s ease-in-out;
 }
-.contact:hover {
-    text-decoration: underline;
+.homepage-link:hover {
+    font-weight: bold;
+    text-decoration: overline;
 }
 
 @keyframes reveal {
@@ -610,7 +612,28 @@ body {
     }
 }
 
+.download-button-container {
+    margin-top: 20px;
+}
+
+.download-link {
+    font-family: "Source Code Pro", monospace;
+    width: 100%;
+    color: #c8c8c8;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px;
+    background: #323232;
+    border-radius: 10px;
+}
+.download-link:hover {
+    font-weight: bold;
+    text-decoration: overline;
+    color: white;
+}
+
 .back-button {
+    font-family: "Source Code Pro", monospace;
     text-decoration: none;
     margin: 10px;
     padding: 10px;
@@ -973,54 +996,144 @@ li > a {
     }
 } */
 
-.main-about {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding: 1rem;
-    margin: 5rem;
-    border-radius: 1rem;
-    background-color: #1d1c1e;
-    color: rgb(151, 52, 190);
-    box-shadow: 0px 0px 15px #4f4f4f;
-}
-
-.main-about > ul {
-    list-style: none;
-    padding: 0;
+/* ----------------------------- */
+.about-container {
     margin: 0;
-}
-
-.main-about > ul li {
-    margin: 0.5rem;
-}
-
-.main-about > ul li::before {
-    content: "\2B58";
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: rgb(151, 52, 190);
-    display: inline-block;
-    width: 1.5rem;
-    margin-left: 0.5rem;
-}
-
-#about-title {
-    display: inline;
-    margin-left: 1.5rem;
-    font-family: "Source Code Pro", sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-.section {
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    background: linear-gradient(#717171, #565656);
+}
+
+.about-box {
+    margin: 10%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0 0 100px 100px;
+    background: linear-gradient(#323232, #141414);
+    box-shadow: 0px 10px 30px -5px #212121;
+    border-radius: 20px;
+    font-family: "Source Code Pro", monospace;
+}
+
+.about-box ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: all 0.5s linear;
+    top: 0;
+}
+
+.about-box ul:last-of-type {
+    top: 60px;
+}
+
+.about-box ul:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    border: 1px dashed #116a11;
+    box-shadow: 0px 0px 15px #116a11;
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.about-box ul li {
+    margin: 10px 60px 100px;
+    position: relative;
+    color: #d6d6d6;
+    border-radius: 10px;
+    line-height: 20px;
+    width: 75%;
+    max-width: 800px;
+}
+
+.about-box ul li > span {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    border: 1px solid #2bcb2b;
+    position: absolute;
+    top: 0;
+    left: -30px;
+}
+
+.about-box ul li > span:before,
+.about-box ul li > span:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #2bcb2b;
+    box-shadow: 0 0 10px #116a11;
+    position: absolute;
+    left: -7.1px;
+}
+
+.about-box ul li > span:before {
+    top: -10px;
+}
+.about-box ul li > span:after {
+    top: 95%;
+}
+
+.about-box ul li > .info {
+    text-align: justify;
+    padding: 10px 20px 15px 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(140deg, #3b583e, #2f362e, #333333);
+    color: #bfe3c3;
+    border-radius: 15px;
+    line-height: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.about-box ul li > .info:hover {
+    transform: scale(1.05);
+}
+
+.about-box .title {
+    /* text-transform: uppercase; */
+    position: relative;
+    top: -15px;
+    left: -10px;
+    color: #2bcb2b;
+    text-align: left;
+    text-shadow: 0px 0px 10px #119c11;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.about-box .info:first-letter {
+    text-transform: capitalize;
+    line-height: 1.5;
+}
+
+.about-box .name {
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-style: italic;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.about-box .time span {
+    position: absolute;
+    left: -110px;
+    color: #2bcb2b;
+    text-shadow: 0px 0px 10px #119c11;
+    font-size: 80%;
+    font-weight: light;
+}
+.about-box .time span:first-child {
+    top: -16px;
+}
+.about-box .time span:last-child {
+    top: 94%;
 }
