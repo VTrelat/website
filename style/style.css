@@ -835,6 +835,7 @@ p.bold {
     position: relative;
     border-radius: 1rem;
     background: linear-gradient(0.25turn, #6a553e, #f99d6f);
+    transition: all 1.5s ease-in-out;
 }
 
 @media screen and (max-width: 1000px) {
