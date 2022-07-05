@@ -187,7 +187,7 @@ const CV = () => {
                     <img src="" />
                     <a
                         className="download-link"
-                        href="https://github.com/VTrelat/website/raw/main/img/cv.pdf"
+                        href="https://github.com/VTrelat/website/raw/main/img/VincentTrélatCV.pdf"
                         target="_blank"
                     >
                         .getPDF()
