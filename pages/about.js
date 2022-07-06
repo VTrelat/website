@@ -1,5 +1,5 @@
 import React from "react";
-import AboutElement from "../components/AboutElement.js";
+import AboutElementList from "../components/AboutElement.js";
 
 const aboutSection = (
     <div>
@@ -16,22 +16,21 @@ const aboutSection = (
         <p>
             <a className="about-attribute">description:</a>
             <p>
-                "Je suis passionné par l'informatique et la programmation depuis
-                mon enfance. Étant issu d'une culture imprégénée de la logique
-                mathématique, je me suis toutefois dirigé vers un domaine de
-                l'informatique théorique qui s'éloigne un peu de la
-                programmation :{" "}
-                <a style={{ fontWeight: "bold" }}>les méthodes formelles.</a>
+                "I have been passionate about computer science and programming
+                since my childhood. As I come from a culture steeped in
+                mathematical logic, I have however turned towards a theoretical
+                field of computer science that is a little different from
+                programming:{" "}
+                <a style={{ fontWeight: "bold" }}>formal methods</a>.
             </p>
             <br />
             <p>
-                Les méthodes formelles sont des techniques permettant de
-                raisonner rigoureusement, à l'aide de la logique, sur un
-                programme informatique, afin de démontrer sa validité par
-                rapport à une certaine spécification. Elles reposent sur la
-                sémantique des programmes, c'est-à-dire sur des descriptions
-                mathématiques formelles du sens d'un programme donné par son
-                code."
+                Formal methods are techniques which allow to reason rigorously,
+                using logic, on a computer program, in order to prove its
+                correctness with respect to a certain specification. They are
+                based on the semantics of programs, that is, on formal
+                mathematical descriptions of the meaning of a program given by
+                its code."
             </p>
         </p>
     </div>
@@ -40,10 +39,8 @@ const aboutSection = (
 const contactSection = (
     <div>
         <p>
-            <a className="about-attribute">email:</a>{" "}
-            <a style={{ position: "relative", left: "-25px" }}>
-                "vincent.trelat@depinfonancy.net",
-            </a>
+            <a className="about-attribute">email:</a> <br />
+            <a>"vincent.trelat@depinfonancy.net",</a>
         </p>
         <p>
             <a className="about-attribute">phone:</a>{" "}
@@ -55,7 +52,7 @@ const contactSection = (
                 className="about-attribute-link"
                 href="https://www.linkedin.com/in/vincent-trélat/"
             >
-                vincent-trélat
+                "vincent-trélat"
             </a>
             ,
         </p>
@@ -65,24 +62,113 @@ const contactSection = (
                 className="about-attribute-link"
                 href="https://github.com/VTrelat"
             >
-                VTrelat
+                "VTrelat"
             </a>
         </p>
     </div>
 );
 
-const projectSection = <div>Empty</div>;
+const aocSection = (
+    <div>
+        <p>
+            <a className="about-attribute">title:</a>{" "}
+            <a className="about-attribute-link" href="https://adventofcode.com">
+                "Advent of Code 2021"
+            </a>
+            ,
+        </p>
+        <p>
+            <a className="about-attribute">description:</a>
+            <br />
+            <a>
+                "Advent of Code is an annual set of Christmas-themed computer
+                programming challenges that follow an Advent calendar. The
+                programming puzzles cover a variety of skill sets and skill
+                levels and can be solved using any programming language.
+                <br />
+                Participants also compete based on speed on both global and
+                private leaderboards. Puzzles consist of two parts that must be
+                solved in order, with the second part not revealed to the user
+                until the first part is solved correctly.
+                <br />
+                As I am French, the problems were released at 6am, so I got up
+                at 5:45 am every morning from December 1st to 25th."
+            </a>
+            ,
+        </p>
+        <p>
+            <a className="about-attribute">numberOfParticipants:</a>{" "}
+            <a className="about-attribute-int">235135</a>,
+        </p>
+        <p>
+            <a className="about-attribute">bestRank:</a>{" "}
+            <a className="about-attribute-int">261</a>,
+        </p>
+        <p>
+            <a className="about-attribute">averageRank:</a>{" "}
+            <a className="about-attribute-int">2023</a>,
+        </p>
+        <p>
+            <a className="about-attribute">worstRank:</a>{" "}
+            <a className="about-attribute-int">7535</a>
+        </p>
+        <p>
+            <a className="about-attribute">languages:</a>
+            <br />
+            <a>["JavaScript", "TypeScript", "Go", "Python"]</a>
+        </p>
+    </div>
+);
+
+const researchSection = (
+    <div>
+        <p>
+            <a className="about-attribute">title:</a>
+            <br />
+            <a>
+                "Formal verification in Isabelle(HOL) of an algorithm for
+                computing strongly connected components"
+            </a>
+            ,
+        </p>
+        <p>
+            <a className="about-attribute">supervisor:</a>{" "}
+            <a
+                className="about-attribute-link"
+                href="https://members.loria.fr/Stephan.Merz/"
+            >
+                Stephan Merz
+            </a>
+            ,
+        </p>
+        <p>
+            <a className="about-attribute">repository:</a>{" "}
+            <a
+                className="about-attribute-link"
+                href="https://github.com/VTrelat/Tarjan"
+            >
+                "github.com/VTrelat/Tarjan
+            </a>
+        </p>
+    </div>
+);
 
 const About = () => {
     const out = (
         <main className="about-container">
             <div class="about-box">
                 <ul id="first-list">
-                    <AboutElement title=".about()" content={aboutSection} />
-                    <AboutElement title=".contact()" content={contactSection} />
-                    <AboutElement
+                    <AboutElementList
+                        title=".contact()"
+                        content={[contactSection]}
+                    />
+                    <AboutElementList
+                        title=".about()"
+                        content={[aboutSection]}
+                    />
+                    <AboutElementList
                         title=".projects()"
-                        content={projectSection}
+                        content={[aocSection, researchSection]}
                     />
                 </ul>
             </div>
