@@ -1003,7 +1003,7 @@ li > a {
     margin: 0;
     padding: 0;
     display: flex;
-    background: linear-gradient(#a28080, #493838);
+    background: linear-gradient(#7f6969, #372d2d);
 }
 
 .about-box {
@@ -1013,7 +1013,7 @@ li > a {
     overflow: hidden;
     padding: 0 0 50px 100px;
     background: linear-gradient(#282828, #101010);
-    box-shadow: 0px 10px 30px -5px #212121;
+    box-shadow: 0px 10px 30px -5px #120d0d;
     border-radius: 20px;
     font-family: "Source Code Pro", monospace;
 }
@@ -1079,10 +1079,10 @@ li > a {
 }
 
 .about-box ul li > span:before {
-    top: -10px;
+    top: -13px;
 }
 .about-box ul li > span:after {
-    top: 95%;
+    top: 100%;
 }
 
 .about-box ul li > .info {
@@ -1090,7 +1090,8 @@ li > a {
     padding: 10px 20px 15px 20px;
     margin-bottom: 20px;
     background: linear-gradient(140deg, #3b583e, #2f362e, #333333);
-    color: #bfe3c3;
+    color: #caefce;
+    text-shadow: 0 0 5px #7b897d;
     border-radius: 15px;
     line-height: 20px;
     transition: all 0.1s ease-in-out;
@@ -1139,4 +1140,53 @@ li > a {
 }
 .about-box .time span:last-child {
     top: 94%;
+}
+
+.about-attribute {
+    color: #dddd5a;
+    text-shadow: 0 0 5px #767602;
+}
+
+.about-attribute-int {
+    color: #ff6767;
+    text-shadow: 0 0 5px #bb6565;
+}
+
+.about-attribute-link {
+    text-decoration: none;
+    color: #69aaf9;
+    text-shadow: 0 0 5px #9bbbe2;
+}
+
+@media screen and (max-width: 768px) {
+    .about-box {
+        margin: 5%;
+        padding: 0 0 10px 0px;
+        border-radius: 15px;
+    }
+
+    .about-box ul:before {
+        left: 20px;
+    }
+
+    .about-box ul li {
+        margin: 10px 40px 80px;
+        border-radius: 10px;
+        line-height: 10px;
+        width: 80%;
+    }
+
+    .about-box ul li > span {
+        left: -20px;
+    }
+
+    .about-box ul li > .info {
+        padding: 5px 20px 10px 10px;
+        border-radius: 10px;
+        font-size: 0.75rem;
+    }
+
+    .about-box .title {
+        left: -5px;
+    }
 }
