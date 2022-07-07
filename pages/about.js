@@ -40,7 +40,9 @@ const contactSection = (
     <div>
         <p>
             <a className="about-attribute">email:</a> <br />
-            <a>"vincent.trelat@depinfonancy.net",</a>
+            <a className="about-attribute-email">
+                "vincent.trelat@depinfonancy.net",
+            </a>
         </p>
         <p>
             <a className="about-attribute">phone:</a>{" "}

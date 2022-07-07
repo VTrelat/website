@@ -4,7 +4,7 @@ const AboutElement = (props) => (
     <div class="info">
         {"{"}
         <br />
-        <p style={{ paddingLeft: "30px" }}>{props.content}</p>
+        <p className="info-paragraph">{props.content}</p>
         {"}"}
     </div>
 );
