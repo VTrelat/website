@@ -568,12 +568,14 @@ body {
     transition: all 0.15s ease-in-out;
 }
 
-.container > img:hover {
-    box-shadow: 0px 0px 40px #939393;
-    height: 20rem;
-    width: 15rem;
-    border-radius: 1rem;
-    border-width: 5px;
+@media screen and (min-width: 768px) {
+    .container > img:hover {
+        box-shadow: 0px 0px 40px #939393;
+        height: 20rem;
+        width: 15rem;
+        border-radius: 1rem;
+        border-width: 5px;
+    }
 }
 
 #col-menu {
@@ -582,6 +584,19 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
+}
+
+@media screen and (max-width: 750px) {
+    .container > img {
+        padding: 0;
+        margin-top: 6rem;
+        margin-bottom: 0;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .homepage-link {
@@ -1127,6 +1142,7 @@ li > a {
     font-weight: 500;
     font-size: 1.5rem;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .about-box .info:first-letter {
@@ -1177,6 +1193,12 @@ li > a {
     padding-left: 30px;
 }
 
+.about-attribute-email {
+    word-break: break-all;
+    color: #69aaf9;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 768px) {
     .about-box {
         margin: 5%;
@@ -1221,6 +1243,8 @@ li > a {
         position: relative;
         font-size: 0.75rem;
         word-break: break-all;
+        color: #69aaf9;
+        text-decoration: none;
     }
 }
 

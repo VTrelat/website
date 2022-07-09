@@ -40,13 +40,20 @@ const contactSection = (
     <div>
         <p>
             <a className="about-attribute">email:</a> <br />
-            <a className="about-attribute-email">
-                "vincent.trelat@depinfonancy.net",
+            <a
+                className="about-attribute-email"
+                href="mailto:vincent.trelat@depinfonancy.net"
+            >
+                "vincent.trelat@depinfonancy.net"
             </a>
+            ,
         </p>
         <p>
             <a className="about-attribute">phone:</a>{" "}
-            <a>"+33 7 68 20 72 01",</a>
+            <a href="tel:+33 7 68 20 72 01" className="about-attribute-link">
+                "+33 7 68 20 72 01"
+            </a>
+            ,
         </p>
         <p>
             <a className="about-attribute">linkedin:</a>{" "}
@@ -122,7 +129,7 @@ const aocSection = (
     </div>
 );
 
-const researchSection = (
+const tarjanSection = (
     <div>
         <p>
             <a className="about-attribute">title:</a>
@@ -132,6 +139,16 @@ const researchSection = (
                 computing strongly connected components"
             </a>
             ,
+        </p>
+        <p>
+            <a className="about-attribute">affiliation:</a>{" "}
+            <a className="about-attribute-link" href="https://www.loria.fr/en/">
+                "Loria (University of Lorraine, Inria)"
+            </a>
+            ,
+        </p>
+        <p>
+            <a className="about-attribute">location:</a> <a>"Nancy, France"</a>,
         </p>
         <p>
             <a className="about-attribute">supervisor:</a>{" "}
@@ -149,10 +166,67 @@ const researchSection = (
                 className="about-attribute-link"
                 href="https://github.com/VTrelat/Tarjan"
             >
-                "github.com/VTrelat/Tarjan
+                "github.com/VTrelat/Tarjan"
             </a>
         </p>
     </div>
+);
+
+const clearsySection = (
+    <div>
+        <p>
+            <a className="about-attribute">title:</a>
+            <br />
+            <a>
+                "Formal verification in B of the security of the real-time
+                execution aspects of the Clearsy Safety Platform"
+            </a>
+            ,
+        </p>
+        <p>
+            <a className="about-attribute">affiliation:</a>{" "}
+            <a className="about-attribute-link" href="https://www.clearsy.com">
+                "Clearsy"
+            </a>
+            ,
+        </p>
+        <p>
+            <a className="about-attribute">location:</a>{" "}
+            <a>"Aix-en-Provence, France"</a>,
+        </p>
+        <p>
+            <a className="about-attribute">supervisor:</a>{" "}
+            <a
+                className="about-attribute-link"
+                href="http://daviddeharbe.github.io/"
+            >
+                David Déharbe
+            </a>
+        </p>
+    </div>
+);
+
+const homepageSection = (
+    <a
+        href="../"
+        style={{
+            textDecoration: "none",
+            color: "#caefce",
+            textShadow: "0 0 5px #7b897d",
+        }}
+    >
+        <div>
+            <p>
+                <a className="about-attribute">title:</a>
+                <br />
+                <a>"Home Page"</a>,
+            </p>
+            <p>
+                <a className="about-attribute">description:</a>{" "}
+                <a>"Click here to come back to the homepage."</a>
+            </p>
+        </div>
+    </a>
 );
 
 const About = () => {
@@ -170,7 +244,21 @@ const About = () => {
                     />
                     <AboutElementList
                         title=".projects()"
-                        content={[aocSection, researchSection]}
+                        content={[clearsySection, tarjanSection, aocSection]}
+                    />
+                    <AboutElementList
+                        title={
+                            <a
+                                href="../"
+                                style={{
+                                    textDecoration: "none",
+                                    color: "#2bcb2b",
+                                }}
+                            >
+                                .homepage()
+                            </a>
+                        }
+                        content={[homepageSection]}
                     />
                 </ul>
             </div>
