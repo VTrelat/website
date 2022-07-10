@@ -50,8 +50,8 @@ const Art = () => {
         <main
             className="artpage"
             style={{
-                height: isDragging ? "100vh" : "auto",
-                overflow: isDragging ? "hidden" : "auto",
+                height: isDragging && !isMobile ? "100vh" : "auto",
+                overflow: isDragging && !isMobile ? "hidden" : "auto",
                 color: "white",
             }}
         >
