@@ -1258,17 +1258,11 @@ li > a {
 /* -------------- ART PAGE ----------------- */
 /* ----------------------------------------- */
 
-#artpage {
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.artpage {
     height: 100vh;
     background: #000000;
     height: 400vh;
-}
-
-canvas {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    max-height: 100vh;
-    max-width: 100vw;
+    font-family: "Pacifico", cursive;
 }
