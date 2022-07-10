@@ -81,13 +81,11 @@ const Art = () => {
                     marginBottom: "10vh",
                     alignItems: "center",
                     width: "100%",
-                    fontSize: "6vw",
+                    fontSize: !isMobile ? "6vw" : "3rem",
                     transition: "all .75s ease-in-out",
                 }}
             >
                 {title}
-                <br />
-                {isMobile ? "mobile" : "desktop"}
             </section>
             <section
                 style={{
@@ -105,16 +103,7 @@ const Art = () => {
                 {renderImages(images)}
             </section>
             <section>
-                <a
-                    href="../"
-                    style={{
-                        textDecoration: "none",
-                        fontFamily: "'Dancing Script', cursive",
-                        fontSize: "2vw",
-                        color: "white",
-                        paddingBottom: "2vh",
-                    }}
-                >
+                <a className="artpage-homepage" href="../">
                     Home Page
                 </a>
             </section>

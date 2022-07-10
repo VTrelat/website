@@ -1289,10 +1289,21 @@ li > a {
     transition: all 0.5s ease-in-out;
 }
 
+.artpage-homepage {
+    text-decoration: none;
+    font-family: "Dancing Script", cursive;
+    font-size: 2vw;
+    color: white;
+    padding-bottom: 2vh;
+}
+
 @media screen and (max-width: 768px) {
     .artpage-image {
         width: 100%;
         height: auto;
+    }
+    .artpage-homepage {
+        font-size: 2rem;
     }
 }
 .artpage-image:hover {
