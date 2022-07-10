@@ -93,7 +93,7 @@ const Art = () => {
                 style={{
                     opacity: isDragging && !isMobile ? "0" : "1",
                     display: "grid",
-                    gridTemplateColumns: "50% 50%",
+                    gridTemplateColumns: !isMobile ? "50% 50%" : "85%",
                     gridGap: "1vw",
                     padding: "2vw",
                     alignItems: "center",

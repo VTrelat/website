@@ -1288,6 +1288,13 @@ li > a {
     border-radius: 20px;
     transition: all 0.5s ease-in-out;
 }
+
+@media screen and (max-width: 768px) {
+    .artpage-image {
+        width: 100%;
+        height: auto;
+    }
+}
 .artpage-image:hover {
     object-fit: contain;
 }
