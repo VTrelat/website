@@ -46,7 +46,7 @@ const Art = () => {
         });
     };
 
-    return !isMobile ? (
+    return (
         <main
             className="artpage"
             style={{
@@ -63,16 +63,20 @@ const Art = () => {
                     height: "auto",
                     width: "100%",
                     transformOrigin: "49% 58%",
-                    transform: `scale(${pos.scale}) translate(${pos.x}px, ${pos.y}px)`,
-                    mask: `linear-gradient(rgba(255,255,255,1) ${
-                        55 * (1 - (pos.scale - 1) / 7)
-                    }%, rgba(255,255,255,${(pos.scale - 1) / 7}))`,
+                    transform: !isMobile
+                        ? `scale(${pos.scale}) translate(${pos.x}px, ${pos.y}px)`
+                        : `none`,
+                    mask: !isMobile
+                        ? `linear-gradient(rgba(255,255,255,1) ${
+                              55 * (1 - (pos.scale - 1) / 7)
+                          }%, rgba(255,255,255,${(pos.scale - 1) / 7}))`
+                        : `linear-gradient(rgba(255,255,255,1) 55%, rgba(255,255,255,0))`,
                 }}
             />
             <section
                 className="artpage-title"
                 style={{
-                    opacity: isDragging ? "0" : "1",
+                    opacity: isDragging && !isMobile ? "0" : "1",
                     marginTop: "5vh",
                     marginBottom: "10vh",
                     alignItems: "center",
@@ -82,73 +86,12 @@ const Art = () => {
                 }}
             >
                 {title}
+                <br />
+                {isMobile ? "mobile" : "desktop"}
             </section>
             <section
                 style={{
-                    opacity: isDragging ? "0" : "1",
-                    display: "grid",
-                    gridTemplateColumns: "50% 50%",
-                    gridGap: "1vw",
-                    padding: "2vw",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    height: "auto",
-                    transition: "all .75s ease-in-out",
-                }}
-            >
-                {renderImages(images)}
-            </section>
-            <section>
-                <a
-                    href="../"
-                    style={{
-                        textDecoration: "none",
-                        fontFamily: "'Dancing Script', cursive",
-                        fontSize: "2vw",
-                        color: "white",
-                        paddingBottom: "2vh",
-                    }}
-                >
-                    Home Page
-                </a>
-            </section>
-        </main>
-    ) : (
-        <main
-            className="artpage"
-            style={{
-                height: "auto",
-                overflow: "auto",
-                color: "white",
-            }}
-        >
-            <img
-                className="artpage-header-image"
-                src="https://raw.githubusercontent.com/VTrelat/website/main/img/art/00.jpg"
-                style={{
-                    width: "100%",
-                    height: "auto",
-                    transform: `scale(1) translate(0, 0)`,
-                    mask: `linear-gradient(rgba(255,255,255,1) ${55}%, rgba(255,255,255,0))`,
-                }}
-            />
-            <section
-                className="artpage-title"
-                style={{
-                    opacity: "1",
-                    marginTop: "5vh",
-                    marginBottom: "10vh",
-                    alignItems: "center",
-                    width: "100%",
-                    fontSize: "6vw",
-                    transition: "all .75s ease-in-out",
-                }}
-            >
-                {title}
-            </section>
-            <section
-                style={{
-                    opacity: "1",
+                    opacity: isDragging && !isMobile ? "0" : "1",
                     display: "grid",
                     gridTemplateColumns: "50% 50%",
                     gridGap: "1vw",
