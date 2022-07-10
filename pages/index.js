@@ -21,6 +21,11 @@ const Index = () => {
                                 .contact()
                             </a>
                         </div>
+                        <div className="col-md" id="col-menu">
+                            <a className="homepage-link" href="/art">
+                                .art()
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
