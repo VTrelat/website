@@ -87,7 +87,9 @@ const Art = () => {
             >
                 {title}
                 <br />
-                {isMobile ? "mobile" : "desktop"}
+                <a style={{ fontSize: "50%" }}>
+                    {isMobile ? "(mobile version)" : "(desktop version)"}
+                </a>
             </section>
             <section
                 style={{
