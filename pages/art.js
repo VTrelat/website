@@ -86,6 +86,8 @@ const Art = () => {
                 }}
             >
                 {title}
+                <br />
+                {isMobile ? "mobile" : "desktop"}
             </section>
             <section
                 style={{
