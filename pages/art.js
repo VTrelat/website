@@ -6,7 +6,7 @@ const getURL = () => {
     let out = [];
     for (let i = 1; i < 23; i++) {
         out.push(
-            `https://raw.githubusercontent.com/VTrelat/website/main/img/art/0${i}.jpg`
+            `https://raw.githubusercontent.com/VTrelat/website/main/img/art/0${i}_low.jpg`
         );
     }
     return out;
@@ -57,7 +57,11 @@ const Art = () => {
         >
             <img
                 className="artpage-header-image"
-                src="https://raw.githubusercontent.com/VTrelat/website/main/img/art/00.jpg"
+                src={
+                    isMobile
+                        ? "https://raw.githubusercontent.com/VTrelat/website/main/img/art/00_low.jpg"
+                        : "https://raw.githubusercontent.com/VTrelat/website/main/img/art/00.jpg"
+                }
                 onWheelCapture={onScroll}
                 style={{
                     height: "auto",
