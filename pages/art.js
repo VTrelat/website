@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { isMobile } from "react-device-detect";
 
+const numberOfImages = 25;
+
 const title = "Art & Photography";
 const getURL = () => {
     let out = [];
-    for (let i = 1; i < 23; i++) {
+    for (let i = 1; i <= numberOfImages; i++) {
         out.push(
             `https://raw.githubusercontent.com/VTrelat/website/main/img/art/0${i}_low.jpg`
         );
@@ -23,7 +25,7 @@ const renderImages = (images) => {
 const images = getURL().sort((a, b) => 0.5 - Math.random());
 
 const Art = () => {
-    const [pos, setPos] = useState({ x: 0, y: 0, scale: 8 });
+    const [pos, setPos] = useState({ x: 0, y: 0, scale: 15 });
     const [isDragging, setIsDragging] = useState(true);
 
     const imageRender = renderImages(images);
@@ -40,11 +42,25 @@ const Art = () => {
         const ratio = 1 - newScale / pos.scale;
 
         setPos({
-            scale: newScale < 1 ? 1 : newScale > 8 ? 8 : newScale,
+            scale: newScale < 1 ? 1 : newScale > 15 ? 15 : newScale,
             x: pos.x,
             y: pos.y,
         });
     };
+
+    const scrollingArrows = (
+        <div
+            className="artpage-arrows"
+            style={{ marginTop: `${75 + 1.7 * (15 - pos.scale)}vh` }}
+        >
+            <div
+                className="artpage-arrow"
+                style={{ opacity: (pos.scale - 1) / 15 }}
+            >
+                {">>>"}
+            </div>
+        </div>
+    );
 
     return (
         <main
@@ -72,11 +88,12 @@ const Art = () => {
                         : `none`,
                     mask: !isMobile
                         ? `linear-gradient(rgba(255,255,255,1) ${
-                              55 * (1 - (pos.scale - 1) / 7)
-                          }%, rgba(255,255,255,${(pos.scale - 1) / 7}))`
+                              55 * (1 - (pos.scale - 1) / 14)
+                          }%, rgba(255,255,255,${(pos.scale - 1) / 14}))`
                         : `linear-gradient(rgba(255,255,255,1) 55%, rgba(255,255,255,0))`,
                 }}
             />
+            {isDragging && !isMobile ? scrollingArrows : null}
             <section
                 className="artpage-title"
                 style={{

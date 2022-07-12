@@ -1316,3 +1316,23 @@ li > a {
         height: 100%;
     }
 }
+
+.artpage-arrows {
+    display: flex;
+    align-items: flex-end;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 5vw;
+    transform: scaleX(1.5) rotate(90deg);
+    margin-top: 75vh;
+}
+
+.artpage-arrow {
+    animation: arrows 1.5s ease-in-out alternate infinite;
+}
+
+@keyframes arrows {
+    100% {
+        transform: translateX(2vw);
+        letter-spacing: 0.5vw;
+    }
+}
